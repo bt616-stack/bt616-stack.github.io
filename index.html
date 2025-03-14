@@ -35,9 +35,63 @@
 			color: green;
             text-decoration: underline;
         }
+        .navbar {
+            background: #111;
+	    border: 1px solid #111;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hamburger {
+            cursor: pointer;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .nav-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background: #fff;
+            position: absolute;
+            top: 59px;
+            left: 10px;
+            width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .nav-links a {
+            color: #111;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            background: #555;
+            color: #fff;
+        }
+        .show {
+            display: flex;
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-title">Shripada</div>
+        <div class="nav-links" id="nav-links">
+            <a href="https://www.shripada.com/">Home</a>
+            <a href="https://www.shripada.com/competitive_exam/comp-index.html">Competitive Exams</a>
+            <a href="https://www.shripada.com/government_services/gov-index.html">Government Services</a>
+            <a href="https://www.shripada.com/ug_courses/ug-index.html">Undergraduate Courses</a>
+            <a href="https://www.shripada.com/vocational_courses/voc-index.html">Vocational Courses</a>
+        </div>
+    </div>
+
     <div class="container">
         <h1>Importance of Education and Its Role</h1>
         
@@ -109,12 +163,27 @@
        
         <h2>Related Articles</h2>
         <ul>
-	    <li><a href="https://www.shripada.com/">Visit Website</a></li>
-            <li><a href="https://www.shripada.com/competitive_exam/comp-index.html">Competitive Exams List</a></li>
-            <li><a href="https://www.shripada.com/government_services/gov-index.html">Government Services List</a></li>
-            <li><a href="https://www.shripada.com/ug_courses/ug-index.html">Undergraduate Courses List</a></li>
-            <li><a href="https://www.shripada.com/vocational_courses/voc-index.html">Vocational Courses List</a></li>
+            <li><a href="https://www.shripada.com/competitive_exam/jee-main.html">JEE Main</a></li>
+            <li><a href="https://www.shripada.com/competitive_exam/jee-advanced.html">JEE Advanced</a></li>
+            <li><a href="https://www.shripada.com/competitive_exam/nest-exam.html">NEST Exam</a></li>
+            <li><a href="https://www.shripada.com/competitive_exam/cat.html">CAT Exam</a></li>
+            <li><a href="https://www.shripada.com/competitive_exam/ctet.html">CTET Exam</a></li>
+            <li><a href="https://www.shripada.com/competitive_exam/sbi-po.html">SBI PO</a></li>
+            <li><a href="https://www.shripada.com/competitive_exam/sbi-ja.html">SBI JA</a></li>
+            <li><a href="https://www.shripada.com/government_services/aso-mea.html">ASO in MEA</a></li>
+            <li><a href="https://www.shripada.com/government_services/aso-css.html">ASO in CSS</a></li>
+            <li><a href="https://www.shripada.com/ug_courses/bba.html">BBA</a></li>
+            <li><a href="https://www.shripada.com/ug_courses/bca.html">BCA</a></li>
+            <li><a href="https://www.shripada.com/vocational_courses/fitter.html">ITI Fitter</a></li>
+            <li><a href="https://www.shripada.com/vocational_courses/copa.html">COPA</a></li>
         </ul>
     </div>
+
+<script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-links");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
